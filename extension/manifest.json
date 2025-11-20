@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SpendSmart SG",
+  "version": "0.1",
+  "description": "Suggest best credit card to use for this purchase.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

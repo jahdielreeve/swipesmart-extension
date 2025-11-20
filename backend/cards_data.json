@@ -1,0 +1,332 @@
+[
+  {
+    "name": "DBS Altitude Visa",
+    "issuer": "DBS",
+    "type": "miles",
+    "base_mpd": 1.3,
+    "fcy_mpd": 2.0,
+    "online_mpd": null,
+    "category_mpd": {
+      "travel": 2.2
+    },
+    "blocked_categories": ["insurance", "govt", "bill_payments"],
+    "blocked_mccs": [],
+    "bonus_cap_amount": null,
+    "cashback_rate": 0.0,
+    "annual_fee": 194.4,
+    "annual_fee_waivable": true,
+    "notes": "1.3 mpd local, ~2 mpd FCY, ~2.2 mpd for airline/hotel/travel."
+  },
+  {
+    "name": "DBS Woman's World Mastercard",
+    "issuer": "DBS",
+    "type": "miles",
+    "base_mpd": 0.4,
+    "fcy_mpd": 0.4,
+    "online_mpd": 4.0,
+    "category_mpd": {
+      "shopping": 4.0,
+      "general": 4.0
+    },
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": 1000,
+    "cashback_rate": 0.0,
+    "annual_fee": 196.2,
+    "annual_fee_waivable": true,
+	"no_fcy_bonus": true,  
+    "notes": "4 mpd on online SGD spend (up to S$1k/mo). FCY online = base."
+  },
+  {
+    "name": "DBS yuu Card",
+    "issuer": "DBS",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": null,
+    "cashback_rate": 17.0,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+    "notes": "Up to 17% rewards on Dairy Farm / Breadtalk group merchants."
+  },
+
+  {
+    "name": "Citi Rewards",
+    "issuer": "Citi",
+    "type": "miles",
+    "base_mpd": 0.4,
+    "fcy_mpd": 0.4,
+    "online_mpd": 4.0,
+    "category_mpd": {
+      "shopping": 4.0
+    },
+    "blocked_categories": ["insurance", "govt", "travel"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": 1000,
+    "cashback_rate": 0.0,
+    "annual_fee": 192.6,
+    "annual_fee_waivable": true,
+	"no_fcy_bonus": true,
+    "notes": "4 mpd on online retail/fashion up to S$1k/mo. Travel excluded."
+  },
+  {
+    "name": "Citi PremierMiles",
+    "issuer": "Citi",
+    "type": "miles",
+    "base_mpd": 1.2,
+    "fcy_mpd": 2.0,
+    "online_mpd": null,
+    "category_mpd": {
+      "travel": 2.2
+    },
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": null,
+    "cashback_rate": 0.0,
+    "annual_fee": 192.6,
+    "annual_fee_waivable": true,
+    "notes": "1.2 mpd local, ~2.0 mpd FCY, ~2.2 mpd on airline/hotel bookings."
+  },
+  {
+    "name": "Citi Cash Back",
+    "issuer": "Citi",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": null,
+    "cashback_rate": 6.0,
+    "annual_fee": 192.6,
+    "annual_fee_waivable": true,
+    "notes": "6% cashback dining & groceries with min spend S$800."
+  },
+
+  {
+    "name": "UOB PRVI Miles Visa",
+    "issuer": "UOB",
+    "type": "miles",
+    "base_mpd": 1.4,
+    "fcy_mpd": 2.4,
+    "online_mpd": null,
+    "category_mpd": {
+      "travel": 3.0
+    },
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": null,
+    "cashback_rate": 0.0,
+    "annual_fee": 256.8,
+    "annual_fee_waivable": true,
+    "notes": "1.4 mpd local, ~2.4 mpd FCY. ~3 mpd for selected online travel (Agoda/Expedia)."
+  },
+  {
+    "name": "UOB EVOL",
+    "issuer": "UOB",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 1000,
+    "cashback_rate": 8.0,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+    "notes": "8% cashback on online & contactless (min spend S$600)."
+  },
+  {
+    "name": "UOB One",
+    "issuer": "UOB",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": null,
+    "cashback_rate": 10.0,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+    "notes": "Up to 10% cashback for Grab/Cold Storage/giant; tiered min-spend system."
+  },
+
+  {
+    "name": "OCBC 90N Visa",
+    "issuer": "OCBC",
+    "type": "miles",
+    "base_mpd": 1.2,
+    "fcy_mpd": 2.1,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": null,
+    "cashback_rate": 0.0,
+    "annual_fee": 196.2,
+    "annual_fee_waivable": true,
+    "notes": "1.2 mpd local, ~2.1 mpd FCY. Simple earn structure."
+  },
+  {
+    "name": "OCBC 365",
+    "issuer": "OCBC",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {
+      "dining": 6.0,
+      "groceries": 3.0,
+      "transport": 3.0,
+      "travel": 3.0
+    },
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 800,
+    "cashback_rate": 3.0,
+    "annual_fee": 80,
+    "annual_fee_waivable": true,
+    "notes": "Up to 6% dining cashback with min spend S$800."
+  },
+  {
+    "name": "OCBC FRANK",
+    "issuer": "OCBC",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 400,
+    "cashback_rate": 6.0,
+    "annual_fee": 80,
+    "annual_fee_waivable": true,
+    "notes": "Up to 6% cashback on online/fashion with min spend S$600."
+  },
+
+  {
+    "name": "HSBC Revolution",
+    "issuer": "HSBC",
+    "type": "miles",
+    "base_mpd": 0.4,
+    "fcy_mpd": 0.4,
+    "online_mpd": 4.0,
+    "category_mpd": {
+      "shopping": 4.0,
+      "dining": 4.0,
+      "travel": 4.0
+    },
+    "blocked_categories": ["insurance", "govt", "quasi_cash"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": 1000,
+    "cashback_rate": 0.0,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+	"no_fcy_bonus": true,
+    "notes": "4 mpd online + contactless (SGD only) up to S$1k/mo."
+  },
+  {
+    "name": "HSBC Advance",
+    "issuer": "HSBC",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {},
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 2000,
+    "cashback_rate": 3.5,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+    "notes": "Up to 3.5% cashback with min spend S$2k/month."
+  },
+
+  {
+    "name": "SCB Journey",
+    "issuer": "SCB",
+    "type": "miles",
+    "base_mpd": 1.2,
+    "fcy_mpd": 2.0,
+    "online_mpd": null,
+    "category_mpd": {
+      "travel": 3.0,
+      "dining": 3.0
+    },
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": 2000,
+    "cashback_rate": 0.0,
+    "annual_fee": 194.4,
+    "annual_fee_waivable": true,
+    "notes": "3 mpd dining + travel up to S$2k/mo."
+  },
+  {
+    "name": "SCB Smart Card",
+    "issuer": "SCB",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {
+      "online": 6.0
+    },
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 300,
+    "cashback_rate": 1.0,
+    "annual_fee": 0,
+    "annual_fee_waivable": true,
+    "notes": "6% cashback on selected online categories."
+  },
+
+  {
+    "name": "Maybank Horizon Visa Signature",
+    "issuer": "Maybank",
+    "type": "miles",
+    "base_mpd": 0.4,
+    "fcy_mpd": 2.0,
+    "online_mpd": null,
+    "category_mpd": {
+      "dining": 3.2,
+      "petrol": 3.2,
+      "travel": 4.0
+    },
+    "blocked_categories": ["insurance", "govt"],
+    "blocked_mccs": ["6300"],
+    "bonus_cap_amount": null,
+    "cashback_rate": 0.0,
+    "annual_fee": 180,
+    "annual_fee_waivable": true,
+    "notes": "High mpd on dining/petrol/travel with certain conditions."
+  },
+  {
+    "name": "Maybank Family & Friends",
+    "issuer": "Maybank",
+    "type": "cashback",
+    "base_mpd": 0,
+    "fcy_mpd": null,
+    "online_mpd": null,
+    "category_mpd": {
+      "groceries": 8.0,
+      "dining": 8.0,
+      "transport": 8.0
+    },
+    "blocked_categories": [],
+    "blocked_mccs": [],
+    "bonus_cap_amount": 800,
+    "cashback_rate": 8.0,
+    "annual_fee": 180,
+    "annual_fee_waivable": true,
+    "notes": "Up to 8% cashback across selected categories (min spend required)."
+  }
+]

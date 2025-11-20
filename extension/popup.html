@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SpendSmartSG</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #020617;
+        color: #e5e7eb;
+        min-width: 360px; /* a bit wider to allow 2 columns */
+      }
+
+      .container {
+        padding: 12px 14px 14px 14px;
+      }
+
+      h1 {
+        font-size: 1rem;
+        margin: 0 0 4px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      h1 span.icon {
+        font-size: 1.1rem;
+      }
+
+      .field-label {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        opacity: 0.8;
+      }
+
+      input,
+      select,
+      button {
+        font-size: 0.85rem;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #1e293b;
+        background: #020617;
+        color: #e5e7eb;
+        box-sizing: border-box;
+      }
+
+      select {
+        width: 100%;
+        padding: 5px 8px;
+        border-radius: 6px;
+        border: 1px solid #1e293b;
+        background: #020617;
+        color: #e5e7eb;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: none;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+      }
+
+      .small-text {
+        font-size: 0.7rem;
+        opacity: 0.7;
+      }
+
+      .top-row {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .top-row .field-group {
+        flex: 1;
+        min-width: 90px;
+      }
+
+      .top-row .check-wrap {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .card {
+        margin-top: 10px;
+        padding: 10px 10px 12px 10px;
+        border-radius: 12px;
+        background: #020617;
+        border: 1px solid #1e293b;
+        box-shadow: 0 0 12px rgba(15, 23, 42, 0.9);
+      }
+
+      .card-title {
+        font-size: 1rem;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 2px 6px;
+        margin-right: 4px;
+        border-radius: 999px;
+        border: 1px solid #1e293b;
+        font-size: 0.7rem;
+      }
+
+      .value-line {
+        font-size: 0.85rem;
+        margin: 2px 0;
+      }
+
+      .value-label {
+        color: #a5b4fc;
+      }
+
+      .value-strong {
+        font-weight: 600;
+      }
+
+      .why {
+        margin-top: 6px;
+        font-size: 0.75rem;
+        color: #cbd5e1;
+      }
+
+      .warning {
+        margin-top: 6px;
+        font-size: 0.75rem;
+        background: #451a03;
+        color: #fed7aa;
+        padding: 4px 6px;
+        border-radius: 6px;
+        border: 1px solid #ea580c;
+      }
+
+      .leaderboard {
+        margin-top: 10px;
+        font-size: 0.8rem;
+      }
+
+      .leader-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 2px 0;
+      }
+
+      .leader-left {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .error {
+        margin-top: 8px;
+        font-size: 0.75rem;
+        color: #fecaca;
+      }
+
+      /* layout: left (cards+controls) | right (result) */
+      .main-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .left-panel,
+      .right-panel {
+        width: 100%;
+      }
+
+      @media (min-width: 430px) {
+        .main-layout {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .left-panel,
+        .right-panel {
+          flex: 1;
+        }
+      }
+
+      /* cards section */
+      .cards-header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4px;
+      }
+
+      .cards-toggle {
+        font-size: 0.75rem;
+        opacity: 0.85;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .cards-mini-buttons {
+        display: flex;
+        gap: 4px;
+      }
+
+      .mini-btn {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+        border-radius: 999px;
+        background: #111827;
+      }
+
+      .mini-btn:hover {
+        background: #1f2937;
+      }
+
+      .card-line {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin: 2px 0;
+      }
+
+      .card-line label {
+        cursor: pointer;
+      }
+
+      .card-group-title {
+        margin-top: 4px;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        opacity: 0.6;
+      }
+
+      .card-logo {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+        border-radius: 999px;
+        margin-left: 2px;
+      }
+
+      .logo-dbs {
+        background: #ef4444;
+        color: #fef2f2;
+      }
+      .logo-uob {
+        background: #1d4ed8;
+        color: #eff6ff;
+      }
+      .logo-ocbc {
+        background: #b91c1c;
+        color: #fee2e2;
+      }
+      .logo-citi {
+        background: #0369a1;
+        color: #e0f2fe;
+      }
+      .logo-hsbc {
+        background: #f97316;
+        color: #fffbeb;
+      }
+      .logo-maybank {
+        background: #facc15;
+        color: #0f172a;
+      }
+
+      .card-info-btn {
+        padding: 0 5px;
+        font-size: 0.65rem;
+        background: transparent;
+        border-radius: 999px;
+        border: 1px solid #4b5563;
+        color: #9ca3af;
+        cursor: pointer;
+      }
+
+      .card-info-btn:hover {
+        background: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <h1>
+        <span class="icon">💳</span>
+        <span>SpendSmartSG</span>
+      </h1>
+      <div class="small-text" id="urlDisplay">Detecting current site…</div>
+      <div id="loading" class="small-text" style="display:none; margin-top:2px;">
+        Checking…
+      </div>
+
+      <!-- inputs row -->
+      <div class="top-row">
+        <div class="field-group">
+          <div class="field-label">Amount:</div>
+          <input id="amount" type="number" step="0.01" value="50" />
+        </div>
+        <div class="field-group">
+          <div class="field-label">Currency:</div>
+          <select id="currency">
+            <option value="SGD">SGD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <div class="field-label">Focus:</div>
+          <select id="mode">
+            <option value="miles">Miles</option>
+            <option value="cashback">Cashback</option>
+          </select>
+        </div>
+        <div class="check-wrap">
+          <button id="checkBtn">Check</button>
+        </div>
+      </div>
+
+      <!-- main horizontal layout -->
+      <div class="main-layout">
+        <!-- left: my cards -->
+        <div class="left-panel">
+          <div class="card">
+            <div class="cards-header-row">
+              <div id="cardToggle" class="cards-toggle">
+                <span>My cards</span>
+                <span id="cardToggleIcon">▾</span>
+              </div>
+              <div class="cards-mini-buttons">
+                <button id="selectAllBtn" type="button" class="mini-btn">All</button>
+                <button id="selectNoneBtn" type="button" class="mini-btn">
+                  None
+                </button>
+              </div>
+            </div>
+
+            <div id="cardSection" style="margin-top:4px; max-height:150px; overflow:auto;">
+              <div id="cardList" class="small-text"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right: result -->
+        <div class="right-panel">
+          <div id="result"></div>
+          <div id="error" class="error"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

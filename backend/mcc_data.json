@@ -1,0 +1,32 @@
+[
+  { "mcc": "5411", "category": "groceries", "label": "Grocery stores, supermarkets" },
+  { "mcc": "5499", "category": "groceries", "label": "Misc food stores / minimarts" },
+  { "mcc": "5812", "category": "dining", "label": "Restaurants" },
+  { "mcc": "5813", "category": "dining", "label": "Bars, pubs, lounges" },
+  { "mcc": "5814", "category": "fast_food", "label": "Fast food restaurants" },
+
+  { "mcc": "5311", "category": "shopping", "label": "Department / online marketplaces" },
+  { "mcc": "5262", "category": "online_shopping", "label": "Internet / catalogue merchants" },
+  { "mcc": "5732", "category": "shopping", "label": "Electronics stores" },
+
+  { "mcc": "4511", "category": "travel_air", "label": "Airlines, air carriers" },
+  { "mcc": "4722", "category": "travel_agency", "label": "Travel agencies, tour operators" },
+  { "mcc": "7011", "category": "travel_hotel", "label": "Hotels, motels, resorts" },
+  { "mcc": "4111", "category": "transport", "label": "Local/suburban transport" },
+  { "mcc": "4121", "category": "ride_hailing", "label": "Taxis, ride-hailing" },
+
+  { "mcc": "4900", "category": "utilities", "label": "Utilities – electric, gas, water" },
+  { "mcc": "4814", "category": "telecom", "label": "Telecom services, phone/internet" },
+
+  { "mcc": "8211", "category": "education", "label": "Schools (elementary & secondary)" },
+  { "mcc": "8220", "category": "education", "label": "Colleges & universities" },
+
+  { "mcc": "5912", "category": "healthcare", "label": "Pharmacies, drug stores" },
+  { "mcc": "8062", "category": "healthcare", "label": "Hospitals" },
+
+  { "mcc": "9311", "category": "govt", "label": "Government – tax payments" },
+  { "mcc": "9399", "category": "govt", "label": "Government services – other" },
+
+  { "mcc": "6300", "category": "insurance", "label": "Insurance premiums" },
+  { "mcc": "6051", "category": "quasi_cash", "label": "Quasi-cash – FX, travelers cheques" }
+]
