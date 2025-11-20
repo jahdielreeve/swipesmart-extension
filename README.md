@@ -1,9 +1,7 @@
 # SpendSmart
 
-A lightweight credit-card recommendation engine for Singapore, powered by FastAPI, Streamlit, and a Chrome Extension.
-
-This app helps users instantly find the **best credit card** for miles or cashback based on:
-
+A lightweight credit-card recommendation engine for Singapore, powered by FastAPI, Streamlit, and a Chrome Extension. 
+This project helps users instantly find the **best credit card** for miles or cashback based on:
 * Merchant URL (e.g. shopee.sg, agoda.com)
 * MCC category mapping
 * Online vs offline spend
@@ -22,7 +20,6 @@ This app helps users instantly find the **best credit card** for miles or cashba
 * Bonus cap warnings
 * Blocked MCC / blocked category logic
 * Returns:
-
   * best card
   * miles + cashback
   * MCC detected
@@ -41,10 +38,9 @@ This app helps users instantly find the **best credit card** for miles or cashba
 
 * Detects current tab URL automatically
 * Sends request to backend
-* Beautiful popup UI
+* Easy to acccess popup UI
 * Amount + mode selector (Miles/Cashback)
-* Loading spinner
-* Bank logos (optional)
+* Select your own cards
 
 ---
 
@@ -57,15 +53,12 @@ project/
 │   ├── rules.py
 │   ├── cards_data.json
 │   ├── mcc_map.py
-│   └── ...
-├── frontend/
-│   └── tester_app.py
+    ├── tester_app.py -> Streamlit tester
 └── extension/
     ├── manifest.json
     ├── popup.html
     ├── popup.js
 ```
-
 ---
 
 ## ⚙️ Setup Instructions
@@ -132,7 +125,7 @@ Supports:
 ## 🛠 Future Upgrades
 
 * Auto‑pull T&Cs from PDFs
-* Train an ML model to categorize unknown merchants
+* R&D for ML model to categorize unknown merchants
 * Automatically parse MCC from receipt/email
 * Deploy backend to Render/Fly.io for 24/7 availability
 
@@ -141,5 +134,3 @@ Supports:
 ## ❤️ Credits
 
 Built for personal finance who want to maximise miles and cashback with minimal effort.
-
-Swipe smart, earn smart.
